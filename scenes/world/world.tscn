@@ -5343,10 +5343,22 @@ position = Vector2(43, 158)
 position = Vector2(59, -4)
 
 [node name="Slime5" parent="TileMap" instance=ExtResource("6_lerof")]
-position = Vector2(53, 246)
+position = Vector2(97, 209)
 
 [node name="EndPoint" type="Marker2D" parent="TileMap/Slime5"]
-position = Vector2(46, -41)
+position = Vector2(-46, 37)
+
+[node name="Slime6" parent="TileMap" instance=ExtResource("6_lerof")]
+position = Vector2(550, 256)
+
+[node name="EndPoint" type="Marker2D" parent="TileMap/Slime6"]
+position = Vector2(72, -4)
+
+[node name="Slime7" parent="TileMap" instance=ExtResource("6_lerof")]
+position = Vector2(204, 207)
+
+[node name="EndPoint" type="Marker2D" parent="TileMap/Slime7"]
+position = Vector2(2, 53)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
