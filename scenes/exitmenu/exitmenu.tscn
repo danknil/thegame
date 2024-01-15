@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dipb0xb0wpunj"]
+
+[ext_resource type="Texture2D" uid="uid://dinyy55ku4py8" path="res://art/button_normal.png" id="1_tynsp"]
+[ext_resource type="Script" path="res://scenes/exitmenu/exitmenu.gd" id="1_w0vcb"]
+[ext_resource type="Texture2D" uid="uid://ttsbkjmnc6hd" path="res://art/button_pressed.png" id="2_ymk4l"]
+[ext_resource type="Texture2D" uid="uid://c8f6avss63kuy" path="res://art/button_hover.png" id="3_7igx7"]
+[ext_resource type="FontFile" uid="uid://pt51ghj586mv" path="res://art/font/NormalFont.ttf" id="4_0b74r"]
+
+[node name="ExitMenu" type="Node2D"]
+script = ExtResource("1_w0vcb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 240.0
+offset_bottom = 136.0
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Control" type="Control" parent="ColorRect"]
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 134.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Control"]
+layout_mode = 1
+offset_right = 239.0
+offset_bottom = 136.0
+alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 2.38
+
+[node name="Quit" type="TextureButton" parent="ColorRect/Control/VBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+texture_normal = ExtResource("1_tynsp")
+texture_pressed = ExtResource("2_ymk4l")
+texture_hover = ExtResource("3_7igx7")
+stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Control/VBoxContainer/MarginContainer3/Quit"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 6.0
+offset_right = 116.0
+offset_bottom = 39.0
+mouse_filter = 1
+theme_override_colors/default_color = Color(1, 0.811765, 0.631373, 1)
+theme_override_fonts/normal_font = ExtResource("4_0b74r")
+theme_override_font_sizes/normal_font_size = 18
+text = "Quit?
+"
+
+[connection signal="pressed" from="ColorRect/Control/VBoxContainer/MarginContainer3/Quit" to="." method="_on_quit_pressed"]

@@ -72,8 +72,10 @@ func _on_detection_area_entered(area):
 func _on_enter_fight_area_entered(area):
 	if area.name == "PlayerHitBox":
 		# TODO: add smooth transition
-		enterFight.set_deferred("monitoring", false)
-		enterFight.set_deferred("monitorable", false)
+		enterFight.queue_free()
+		detection.queue_free()
+		
+		isFollowing = false
 		var packedScene = PackedScene.new()
 		packedScene.pack(get_tree().current_scene)
 		ResourceSaver.save(packedScene, "res://world.tscn")

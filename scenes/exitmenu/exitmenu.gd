@@ -1,0 +1,24 @@
+extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	pass
+	
+func toggle():
+	visible = !visible
+	
+func close():
+	visible = false
+
+func _on_quit_pressed():
+	close()
+	get_tree().paused = false
+	var packedScene = PackedScene.new()
+	packedScene.pack(get_tree().current_scene)
+	ResourceSaver.save(packedScene, "res://world.tscn")
+	get_tree().quit()

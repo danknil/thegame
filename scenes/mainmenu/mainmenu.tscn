@@ -2627,29 +2627,6 @@ theme_override_fonts/normal_font = ExtResource("8_3303x")
 theme_override_font_sizes/normal_font_size = 18
 text = "Play"
 
-[node name="MarginContainer2" type="MarginContainer" parent="Control/VBoxContainer"]
-layout_mode = 2
-
-[node name="Settings" type="TextureButton" parent="Control/VBoxContainer/MarginContainer2"]
-layout_mode = 2
-texture_normal = ExtResource("5_jhrm1")
-texture_pressed = ExtResource("6_y5nue")
-texture_hover = ExtResource("7_jyf24")
-stretch_mode = 0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer/MarginContainer2/Settings"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 8.0
-offset_right = 117.0
-offset_bottom = 41.0
-mouse_filter = 1
-theme_override_colors/default_color = Color(1, 0.811765, 0.631373, 1)
-theme_override_colors/font_selected_color = Color(1, 0.811765, 0.631373, 1)
-theme_override_fonts/normal_font = ExtResource("8_3303x")
-theme_override_font_sizes/normal_font_size = 18
-text = "Settings"
-
 [node name="MarginContainer3" type="MarginContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
@@ -2674,5 +2651,4 @@ text = "Quit
 "
 
 [connection signal="pressed" from="Control/VBoxContainer/MarginContainer/Play" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/MarginContainer2/Settings" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/MarginContainer3/Quit" to="." method="_on_quit_button_pressed"]

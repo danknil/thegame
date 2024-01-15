@@ -252,6 +252,8 @@ libraries = {
 }
 
 [node name="EnterFight" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnterFight"]
 position = Vector2(0, -5)
@@ -259,6 +261,8 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_uq32f")
 
 [node name="Detection" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
 position = Vector2(0, -6)
